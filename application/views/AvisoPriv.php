@@ -1,9 +1,11 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>Plantilla/css/Materialize.css" />
+    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>Plantilla/css/materialize.css" />
     <link rel="stylesheet" type="text/css" href="<?= base_url() ?>Plantilla/css/index.css" />
     <link rel="stylesheet" type="text/css" href="<?= base_url() ?>Plantilla/css/nosotros.css" />
+    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>Plantilla/css/cookies.css" />
+
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="<?= base_url() ?>Plantilla/js/materialize.js"></script>
@@ -11,38 +13,68 @@
     <!--link rel="stylesheet" type="text/javascript" href="js/index.js"-->
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
     <title>UNIFORMES</title>
 </head>
 
 <body>
     <div>
-               <!-- Dropdown Structure -->
-               <ul id="dropdown1" class="dropdown-content">
-            <li><a href="<?= base_url('index.php/CatgEjecutivo') ?>">Ejecutivos</a></li>
-            <li><a href="<?= base_url('index.php/CatgIndustrial') ?>">Industriales</a></li>
-            <!--li class="divider"></li-->
-            <!--<li><a href="#!">Calzado</a></li>
-            <li><a href="#!">Telas</a></li>
-            <li><a href="#!">Principales clientes</a></li>-->
-        </ul>
-        <nav>
-            <div class="nav-wrapper black">
-                <a href="index.html" class="brand-logo">
-                    <img id="logo" src="<?= base_url() ?>Plantilla/img/Logo_2.png">
-                </a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <div class="navbar-fixed">
+                <!-- Dropdown Structure -->
+                <ul id="dropdown1" class="dropdown-content">
+                    <li><a href="<?= base_url('index.php/CatgEjecutivo') ?>">Ejecutivos</a></li>
+                    <li><a href="<?= base_url('index.php/CatgIndustrial') ?>">Industriales</a></li>
+                    <!--li class="divider"></li-->
+                    <!--<li><a href="#!">Calzado</a></li>
+                    <li><a href="#!">Telas</a></li>
+                    <li><a href="#!">Principales clientes</a></li>-->
+                </ul>
+                <nav>
+                    <div class="nav-wrapper black">
+                        <ul class="left">
+                            <li>                        
+                                <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                            </li>
+                            <li>
+                                <a href="<?= base_url('index.php/Welcome') ?>" class="brand-logo">
+                                    <img width="90px" height="50px" src="<?= base_url() ?>Plantilla/img/Logo_2.png">
+                                </a>                            
+                            </li>
+                        </ul>
+
+                        <ul id="nav-mobile" class="right hide-on-med-and-down">
+                            <li><a href="<?= base_url('index.php/Welcome') ?>">Inicio</a></li>
+                            <li><a href="<?= base_url('index.php/nosotros') ?>">Nosotros</a></li>
+                            <!--<li><a href="<?= base_url('index.php/marcas') ?>">Marcas</a></li>-->
+                            <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Uniformes<i class="material-icons right">arrow_drop_down</i></a></li>
+                            <li><a href="<?= base_url('index.php/noticias') ?>">Noticias</a></li>
+                            <li><a href="<?= base_url('index.php/contacto') ?>">Contacto</a></li>
+                            <!--<li><a href="login.html">Acceder</a></li>-->
+                        </ul>
+                    </div>
+                </nav>
+
+        </div>
+
+                <ul id="dropdown2" class="dropdown-content">
+                        <li><a href="<?= base_url('index.php/CatgEjecutivo') ?>">Ejecutivos</a></li>
+                        <li><a href="<?= base_url('index.php/CatgIndustrial') ?>">Industriales</a></li>
+                </ul>
+
+            
+                <ul id="slide-out" class="side-nav">
                     <li><a href="<?= base_url('index.php/Welcome') ?>">Inicio</a></li>
                     <li><a href="<?= base_url('index.php/nosotros') ?>">Nosotros</a></li>
-                    <!--<li><a href="<?= base_url('index.php/marcas') ?>">Marcas</a></li>-->
-                    <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Uniformes<i class="material-icons right">arrow_drop_down</i></a></li>
-                    <!--li><a href="<?= base_url('index.php/noticias') ?>">Noticias</a></li-->
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Uniformes<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="<?= base_url('index.php/noticias') ?>">Noticias</a></li>
                     <li><a href="<?= base_url('index.php/contacto') ?>">Contacto</a></li>
-                    <!--<li><a href="login.html">Acceder</a></li>-->
                 </ul>
-            </div>
-        </nav>
+
+
+
 
     </div>
 
@@ -78,7 +110,7 @@
 
                                 <li>Anexar copia de su identificación oficial o del representante legal del titular, copia del instrumento público que lo acredita o carta poder firmada ante dos testigos). </li>
 
-                                <li>Envíar dicha documentación vía correo electrónico a <a href="mailto:<nowiki>administracion@gesquat.com.mx?subject=subject text">administracion@gesquat.com</a> o entregarlos personalmente en nuestras oficinas. </li>
+                                <li>Envíar dicha documentación vía correo electrónico a <a href="mailto:administracion@gesquat.com.mx?">administracion@gesquat.com</a> o entregarlos personalmente en nuestras oficinas. </li>
 
                             </ol>
                         </dd>
@@ -97,17 +129,39 @@
 
         </div>
     </div>
+
+    <div class="aviso-cookies" id="avisoCokkies">
+        <!--img class="galleta" src="<?= base_url() ?>Plantilla/img/cookies.jpg" alt="Galleta"-->
+        <h3 class="tituloCookies">Cookies</h3>
+        <p class="parrafoCookies">Utilizamos Cookies propias y de terceros para mejorar nuestros servicios.</p>
+        <button class="Boton" id="btn-aceptar-cookies">De Acuerdo</button>
+        <a class="enlace" href="" >Aviso de Cookies</a>
+    </div>
+
+    <div class="fondo-aviso-cookies" id="fondo-aviso-cookies"></div>
+
+
     <footer class="page-footer black">
         <div class="container ">
             <div class="row ">
                 <div class="col l6 s12 ">
-                    <h5 class="white-text ">Gesquat Collection</h5>
-                    <p class="grey-text text-lighten-4 ">Grupo empresarial Squat S.A DE C.V.</p>
+                <h5 class="white-text ">Renée Collection</h5>
+                    <p class="grey-text text-lighten-4 ">Grupo Empresarial Squat S.A DE C.V.</p>
                     <p class="grey-text text-lighten-4 ">Calle 14 #8 Int. 2 Colonia Reforma Social, Alcaldía Miguel Hidalgo, C.P. 11650, Ciudad de México.</p>
                 </div>
                 <div class="col l4 offset-l2 s12 ">
-                    <h5 class="white-text ">Links</h5>
-                    <ul>
+                <h5 class="white-text ">Síguenos 
+
+                <a href="https://www.facebook.com/profile.php?id=100086072952703"  target="_blank">
+                <i class="white-text  fab fa-facebook"></i>&nbsp;
+                </a>
+
+                <a href="https://instagram.com/uniformes_renee_mr?r=nametag"  target="_blank">
+                <i class="white-text  fab fa-instagram"></i>
+                </a>
+
+                </h5>         
+                <ul>
                         <li>
                         <a class="grey-text text-lighten-3 " href="<?= base_url('index.php/AvisoPriv') ?>">Aviso de Privacidad</a>
                         </li>
@@ -130,6 +184,7 @@
 
 </body>
 
+<script type="text/javascript" src="<?= base_url() ?>Plantilla/js/avisoCookies.js"></script>
 
 
 
@@ -143,6 +198,20 @@
 
     $(document).ready(function() {
         $('.carousel').carousel();
+    });
+
+    $(".button-collapse").sideNav({
+
+        menuWidth: 175, // Default is 300
+        edge: 'right', // Choose the horizontal origin
+        closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        draggable: true, // Choose whether you can drag to open on touch screens,
+        onOpen: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is opened
+        onClose: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is closed
+    });
+
+    document.addEventListener('DOMContentLoaded', function(){
+    //*M.AutoInit();
     });
 
     /**$          ('.carousel.carousel-slider').carousel({

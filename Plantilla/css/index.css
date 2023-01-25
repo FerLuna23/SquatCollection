@@ -1,168 +1,178 @@
-            html {
-                font-family: Calibri;
-            }
-            
-            #dropdown1 {
-                text-decoration-color: #bcaaa4;
-            }
-            
-            .card-panel {
-                border-radius: 5%;
-                /**background: linear-gradient(to bottom, #f9ebea 50%, #bcaaa4 100%);*/
-                background: rgb(245, 207, 135);
-                background: radial-gradient(circle, rgba(245, 207, 135, 0.5354516806722689) 10%, rgba(255, 255, 255, 0.6502976190476191) 70%, rgba(255, 255, 255, 0.3337710084033614) 100%);
-            }
-            
-            .TxtCard {
-                font-size: 25px;
-            }
-            
-            .txtEtiq {
-                font-size: 20px;
-                font-style: oblique;
-            }
-            
-            .carrusel {
-                /*width: 100%;*/
-                /*height: 62%;*/
-                background: linear-gradient(to bottom, #e0e0e0 0%, #fef9e7 100%);
-                transition-duration: 6s;
-                transition-duration: 5s;
-            }
-            
-            .fondo {
-                width: 100%;
-                height: 40%;
-                /*background-image: ;*/
-            }
-            
-            .nav-wrapper {
-                height: 20%;
-            }
-            
-            #logo {
-                width: 13%;
-            }
-            
-            .titulo {
-                text-align: center;
-            }
-            
-            .AP {
-                text-align: justify;
-            }
-            
-            .PC {
-                background-color: #d7ccc8;
-                width: 100%;
-                height: 20%;
-            }
-            
-            .textoPC {
-                font-size: 40px;
-                text-align: center;
-            }
-            
-            .tituloinicio {
-                font-size: 40px;
-                text-align: center;
-            }
-            
-            .tituloLVDNA {
-                font-size: 50px;
-                text-align: center;
-            }
-            
-            .LVNC {
-                font-size: 30px;
-                text-align: center;
-            }
-            
-            .LVDNC {
-                width: 100%;
-            }
-            
-            .AE {
-                text-align: justify;
-            }
-            /**p {
+                html {
+                    font-family: Calibri;
+                }
+                
+                #dropdown1 {
+                    text-decoration-color: #bcaaa4;
+                }
+                
+                .card-panel {
+                    border-radius: 5%;
+                    /**background: linear-gradient(to bottom, #f9ebea 50%, #bcaaa4 100%);*/
+                    background: rgb(245, 207, 135);
+                    background: radial-gradient(circle, rgba(245, 207, 135, 0.5354516806722689) 10%, rgba(255, 255, 255, 0.6502976190476191) 70%, rgba(255, 255, 255, 0.3337710084033614) 100%);
+                }
+                
+                .TxtCard {
+                    font-size: 25px;
+                }
+                
+                .txtEtiq {
+                    font-size: 20px;
+                    font-style: oblique;
+                }
+                
+                .carrusel {
+                    /*width: 100%;*/
+                    /*height: 62%;*/
+                    background: linear-gradient(to bottom, #e0e0e0 0%, #fef9e7 100%);
+                    transition-duration: 6s;
+                    transition-duration: 5s;
+                }
+                
+                .fondo {
+                    width: 100%;
+                    height: 40%;
+                    /*background-image: ;*/
+                }
+                
+                .nav-wrapper {
+                    height: 20%;
+                }
+                
+                .titulo {
+                    text-align: center;
+                }
+                
+                .AP {
+                    text-align: justify;
+                }
+                
+                .PC {
+                    background-color: #d7ccc8;
+                    width: 100%;
+                    height: 20%;
+                }
+                
+                .textoPC {
+                    font-size: 40px;
+                    text-align: center;
+                }
+                
+                .tituloinicio {
+                    font-size: 40px;
+                    text-align: center;
+                }
+                
+                .tituloLVDNA {
+                    font-size: 50px;
+                    text-align: center;
+                }
+                
+                .LVNC {
+                    font-size: 30px;
+                    text-align: center;
+                }
+                
+                .LVDNC {
+                    width: 100%;
+                }
+                
+                .AE,
+                .TDT,
+                .PVT {
+                    text-align: justify;
+                }
+                /**p {
     font-size: 10%;
 }*/
-            
-            .h1 {
-                align-items: center;
-                text-align: center;
-                font-family: Calibri;
-            }
-            
-            #imgPC {
-                display: block;
-                margin: auto;
-            }
-            /** body de Aviso de Privacidad */
-            
-            .bodyContentAP {
-                background: linear-gradient(to bottom, #fef9e7 0%, #fef9e7 100%);
-            }
-            /** estilos de Marcas*/
-            
-            .Mar {
-                text-align: center;
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            }
-            
-            .imgMarcas {
-                align-items: center;
-            }
-            /** estilos de Contacto */
-            
-            #BtnSend {
-                justify-content: flex-start;
-                margin-left: 6%;
-                background-color: #26A69A;
-            }
-            /** estilos de Catálogo */
-            
-            #album {
-                border: 1px solid #ddd;
-                border-radius: 4px;
-                padding: 5px;
-                width: 150px;
-                /**width: 100%;
+                
+                .h1 {
+                    align-items: center;
+                    text-align: center;
+                    font-family: Calibri;
+                }
+                
+                #imgPC {
+                    display: block;
+                    margin: auto;
+                }
+                /** body de Aviso de Privacidad */
+                
+                .bodyContentAP {
+                    background: linear-gradient(to bottom, #fef9e7 0%, #fef9e7 100%);
+                }
+                /** estilos de Marcas*/
+                
+                .Mar {
+                    text-align: center;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                }
+                
+                .imgMarcas {
+                    align-items: center;
+                }
+                /** estilos de Contacto */
+                
+                #BtnSend {
+                    justify-content: flex-start;
+                    margin-left: 6%;
+                    background-color: #26A69A;
+                }
+                /** estilos de Catálogo */
+                
+                #album {
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    padding: 5px;
+                    width: 150px;
+                    /**width: 100%;
             */
-                height: 30%;
-            }
-            
-            .textoCU {
-                font-size: 300%;
-                text-align: center;
-            }
-            
-            #H {
-                border-radius: 10%;
-                border-color: aqua;
-            }
-            
-            .CU {
-                background-color: #ff7043;
-                width: 100%;
-                height: 10%;
-            }
-            /** Estilos de Login*/
-            
-            .log {
-                text-align: center;
-                font-family: calibri;
-            }
-            
-            #boton {
-                /**position: relative;*/
-                position: absolute;
-                top: 206.5%;
-                right: 54.7%;
-            }
-            /** Estilos de imagen 
+                    height: 30%;
+                }
+                
+                .textoCU {
+                    font-size: 300%;
+                    text-align: center;
+                }
+                
+                #H {
+                    border-radius: 10%;
+                    border-color: aqua;
+                }
+                
+                .CU {
+                    background-color: #ff7043;
+                    width: 100%;
+                    height: 10%;
+                }
+                /** Estilos de Login*/
+                
+                .log {
+                    text-align: center;
+                    font-family: calibri;
+                }
+                
+                #boton {
+                    /**position: relative;*/
+                    position: absolute;
+                    top: 206.5%;
+                    right: 54.7%;
+                }
+                /** Estilos de imagen 
         top: 5%;
         #imag {
             background-image: url("img/chef_h.jpeg");
         }*/
+                /**Titulo Noticias*/
+                
+                .tituloNoticias {
+                    font-family: calibri;
+                    font-size: 150%;
+                }
+                
+                img {
+                    /**display: block;*/
+                    margin: 0 auto;
+                    max-width: 100%;
+                }

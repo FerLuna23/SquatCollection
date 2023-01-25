@@ -7,8 +7,10 @@ class Contacto extends CI_Controller {
 	public function index()
 	{ 
 		//print_r($this->db);
-		$this->load->view('Contacto');
+		$this->load->view('contacto');
 	}
 
+
+	
 }
 ?>

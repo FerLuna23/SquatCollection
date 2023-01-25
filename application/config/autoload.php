@@ -58,6 +58,8 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
+//$autoload['libraries'] = array('');
+//para correr con base de datos se agrega "database"
 $autoload['libraries'] = array('database');
 
 /*

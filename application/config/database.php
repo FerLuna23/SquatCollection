@@ -71,9 +71,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | the query builder class.
 */
 $active_group = 'mysqli';
+//$active_group = 'mysqli';
 $query_builder = TRUE;
 
-$db['default'] = array(
+/**$db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => '',
@@ -93,13 +94,14 @@ $db['default'] = array(
 	'stricton' => FALSE,
 	'failover' => array(),
 	'save_queries' => TRUE
-);
+);*/
 
-//200.68.136.229
+//200.68.136.20
 
 $db['mysqli'] = array(
 	'dsn'	=> '',
 	'hostname' => '127.0.0.1',
+	//'hostname' => 'gesquat.com',
 	'username' => 'root',
 	'password' => '',
 	'database' => 'gestqu053',
