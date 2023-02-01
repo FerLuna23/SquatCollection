@@ -124,8 +124,8 @@
                 </div>
                     <div class="collapsible-body">
                         <div style=" display: flex;  justify-content: space-between; ">
-                                <img class="activator" style="height:300px;" src="<?= base_url() ?>Plantilla/img/Noticias/Noticia_2/Sesion_2.1.jpg">
-                                <img class="activator" style="height:300px;" src="<?= base_url() ?>Plantilla/img/Noticias/Noticia_2/Sesion_2.2.jpg">
+                                <img class="activator" style="height:300px;" src="<?= base_url() ?>Plantilla/img/Noticias/Noticia_3/noticia3.jpg">
+                                <img class="activator" style="height:300px;" src="<?= base_url() ?>Plantilla/img/Noticias/Noticia_3/noticia3_1.jpg">
 
                         </div>
                     </div>
@@ -175,10 +175,6 @@
                             <a class="grey-text text-lighten-3 " href="<?= base_url('index.php/AvisoPriv') ?>">Aviso de Privacidad</a>
                         </li>
 
-                        <li>
-                            <i class="fab fa-facebook"></i>
-                            <i class="fab fa-instagram"></i>
-                        </li>
 
                         <li>
                             <a class="grey-text text-lighten-3 " href="!#">© 2022 Copyright by Squat</a>
@@ -216,7 +212,7 @@
 
             $(".button-collapse").sideNav({
 
-                menuWidth: 175, // Default is 300
+                menuWidth: 180, // Default is 300
                 edge: 'right', // Choose the horizontal origin
                 closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
                 draggable: true, // Choose whether you can drag to open on touch screens,
