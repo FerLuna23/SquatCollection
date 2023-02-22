@@ -105,7 +105,7 @@
     <div class="row hide-on-large-only">
         <div class="col s12 m3">
             <div class="card z-depth-5">
-                <div class="card-image waves-effect waves-block waves-light">
+                <div class="card-image">
                     <img class="activator" src="<?= base_url() ?>Plantilla/img/QuienesSomos.jpg">
                 </div>
                 <div class="card-content">
@@ -120,7 +120,7 @@
 
         <div class="col s12 m3">
             <div class="card z-depth-5">
-                <div class="card-image waves-effect waves-block waves-light">
+                <div class="card-image">
                     <img class="activator" src="<?= base_url() ?>Plantilla/img/ExtensoCatalogo.jpg">
                 </div>
                 <div class="card-content">
@@ -135,7 +135,7 @@
 
         <div class="col s12 m3">
             <div class="card z-depth-5">
-                <div class="card-image waves-effect waves-block waves-light">
+                <div class="card-image">
                     <img class="activator" src="<?= base_url() ?>Plantilla/img/Misión.jpg">
                 </div>
                 <div class="card-content">
@@ -150,7 +150,7 @@
 
         <div class="col s12 m3">
             <div class="card z-depth-5">
-                <div class="card-image waves-effect waves-block waves-light">
+                <div class="card-image">
                     <img class="activator" src="<?= base_url() ?>Plantilla/img/Visión.jpg">
                 </div>
                 <div class="card-content">
@@ -169,12 +169,13 @@
 
         <ul id="tabs-swipe-demo" class="tabs">
 
-            <li class="tab col s3"><a class="active" href="#test-swipe-1" id="TextoMenu">Quienes Somos</a></li>
-            <li class="tab col s3"><a href="#test-swipe-2" id="TextoMenu">Objetivo Comercial</a></li>
-            <li class="tab col s3"><a href="#test-swipe-3" id="TextoMenu">Misión</a></li>
-            <li class="tab col s3"><a href="#test-swipe-4" id="TextoMenu">Visión</a></li>
+            <li class="tab col s3"><a class="active" href="#test-swipe-1" id="TextoMenu"><?= $texto6[0]->nombre; ?></a></li>
+            <li class="tab col s3"><a href="#test-swipe-2" id="TextoMenu"><?= $texto7[0]->nombre; ?></a></li>
+            <li class="tab col s3"><a href="#test-swipe-3" id="TextoMenu"><?= $texto8[0]->nombre; ?></a></li>
+            <li class="tab col s3"><a href="#test-swipe-4" id="TextoMenu"><?= $texto9[0]->nombre; ?></a></li>
 
         </ul>
+
 
 
         <div id="test-swipe-1" class="col s12 ">
@@ -183,7 +184,7 @@
                 <div class="col s6"><br><br>
                 
                     <div class="Texto">
-                        <p class="QN center-align"> Grupo Empresarial Squat es una empresa mexicana especializada en la comercialización de uniformes y diseño de imagen corporativa. Con casi dos décadas en el mercado, desde 2006 nos hemos encargado de distribuir productos con los estándares de la más alta calidad.</p>
+                        <p class="QN center-align"><?= $texto6[0]->Texto; ?> </p>
                     </div>
 
                 </div>
@@ -216,7 +217,7 @@
 
                     <div></div></br></br></br></br></br>
                     <div class="Texto">
-                        <p class="OC">La satisfacción de nuestros clientes a través del diseño, confort, calidad y rendimiento de los productos.</p>
+                        <p class="OC"><?= $texto7[0]->Texto; ?></p>
                     </div>
                     <div></div>
                 </div>
@@ -229,7 +230,7 @@
                 <div class="col s6">
                 <div></div></br></br></br></br>
                     <div class="Texto">  
-                      <p class="Mision">Proveer de uniformes, accesorios y prendas con las mejores materias textiles, ofreciendo a nuestros clientes la mejor experiencia en comodidad, imagen y calidad.</p>
+                      <p class="Mision"><?= $texto8[0]->Texto; ?></p>
                     </div>
                 </div>
                 <div class="col s6">
@@ -255,7 +256,7 @@
                 <div class="col s6">
                 <div></div></br></br></br></br>
                     <div class="Texto">
-                    <p class="Vision">Dominar el mercado gracias a la innovación, calidad y servicio a nivel Nacional, siempre con las puertas abiertas para crear sociedades comerciales.</p>
+                    <p class="Vision"><?= $texto9[0]->Texto; ?></p>
                     </div>
                 </div>
 

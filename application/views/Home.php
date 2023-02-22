@@ -126,15 +126,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     </div>
 
-    <div>
-        
+        <a class="waves-effect waves-light btn" href="<?= base_url('index.php/setting') ?>"><i class="material-icons right">settings</i>Editar</a>
+
         <div>
             <p class="tituloLVDNA">LA VOZ DE NUESTRA COLECCIÓN!</p>
         </div>
 
         <div>
-            <p class="LVNC"><u>Fresca y liviana.</u><br>Diversos muestrarios de telas (climas cálidos o templados) que se pueden unificar. <br><br><u>Moderna y práctica.</u><br>Diseños básicos y especiales a su elección (contrastes de telas, tipo de botón,
-                            pespuntes, otros.) <br><br><u>Elegante y única.</u><br>Bordados sublimados y personalizados.</p>
+            <p class="LVNC"><u><?= $texto3[0]->nombre; ?></u><br><?= $texto3[0]->Texto; ?>. <br><br><u><?= $texto4[0]->nombre; ?>.</u><br> <?= $texto4[0]->Texto; ?>. <br><br><u><?= $texto5[0]->nombre; ?>.</u><br><?= $texto5[0]->Texto; ?>.</p>
         </div>
 
     </div>
@@ -142,12 +141,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="row">
 
         <div class="col s12 m12 l4">
+            
             <div>
-                <p class="tituloinicio">ASESORIA DE EXPERTOS</p>
+                <p class="tituloinicio"><?= $texto[0]->nombre; ?></p>
+
+                <!--div><?= var_dump($texto); ?></div-->
+
             </div>
+            
+        
             <div>
-                <p class="AE">Las soluciones integrales de GESQUAT permiten a nuestros Clientes seleccionar entre diferentes diseños 
-                        y modelos, nuestros profesionales en ventas y diseño siempre están dispuestos para asesorar.</p>
+                <p class="AE"><?= $texto[0]->Texto; ?></p>
             </div>  
             <div class="hide-on-large-only">
                 <img class="LVDNC responsive-img" src="<?= base_url() ?>Plantilla/img/ADE.jpeg">
@@ -157,12 +161,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="col s12 m12 l4">
             <div> 
-                <p class="tituloinicio">TOMA DE TALLAS</p>
+                <p class="tituloinicio" name="titulo"><?= $texto1[0]->nombre; ?></p>
             </div>
             <div>
-                <p class="TDT">Nos interesa la comodidad de nuestros Clientes, por eso la toma de tallas se realiza en sus instalaciones.
-                   Nuestro formato para toma de medidas cuenta con las especificaciones necesarias para que las prendas se elaboren a la 
-                   medida del Cliente.</p>
+                <p class="TDT"><?= $texto1[0]->Texto; ?></p>
             </div>
             <div class="hide-on-large-only">
                 <img class="LVDNC responsive-img" src="<?= base_url() ?>Plantilla/img/TDT.jpeg">
@@ -173,11 +175,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="col s12 m12 l4">
             <div>
-                <p class="tituloinicio">POST VENTA</p>
+                <p class="tituloinicio"><?= $texto2[0]->nombre; ?></p>
             </div>
             <div>
-                <p class="PVT">En GESQUAT siempre buscamos que la venta y la postventa cumplan con la satisfacción de nuestros 
-                    Clientes,  logrando generar fidelidad a largo plazo.</p>
+                <p class="PVT"><?= $texto2[0]->Texto; ?></p>
             </div>
             <div class="hide-on-large-only">
                 <img class="LVDNC responsive-img" src="<?= base_url() ?>Plantilla/img/PV.jpeg">
@@ -296,6 +297,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script type="text/javascript" src="<?= base_url() ?>Plantilla/js/avisoCookies.js"></script>
 
 <script type="text/javascript ">
+
     $(document).ready(function() {
 
         setInterval(function(){
@@ -332,6 +334,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         document.addEventListener('DOMContentLoaded', function(){
         //*M.AutoInit();
     });
+
+    const llenar_datos = (id, titulo, texto)=>{
+        console.log(id, titulo, texto);
+    }    
+    
 </script>
 
 </html>
