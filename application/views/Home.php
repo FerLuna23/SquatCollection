@@ -126,7 +126,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     </div>
 
-        <a class="waves-effect waves-light btn" href="<?= base_url('index.php/setting') ?>"><i class="material-icons right">settings</i>Editar</a>
+        <a class="waves-effect waves-light btn" href="<?= base_url('index.php/login') ?>"><i class="material-icons right">settings</i>Editar</a>
 
         <div>
             <p class="tituloLVDNA">LA VOZ DE NUESTRA COLECCIÓN!</p>

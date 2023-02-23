@@ -60,7 +60,7 @@ $autoload['packages'] = array();
 */
 //$autoload['libraries'] = array('');
 //para correr con base de datos se agrega "database"
-$autoload['libraries'] = array('database');
+$autoload['libraries'] = array('database', 'session');
 
 /*
 | -------------------------------------------------------------------

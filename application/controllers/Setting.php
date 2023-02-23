@@ -3,6 +3,14 @@
 
 	class setting extends CI_Controller {
 
+        public function __construct()
+        {
+            parent::__construct();
+
+            if (!$this->session->userdata('status')):
+                header("Location:" . base_url('index.php/login'));
+            endif;
+        }
 
 		public function index()
 		{   $this->load->model('home_model');
