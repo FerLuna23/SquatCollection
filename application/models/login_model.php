@@ -9,5 +9,12 @@ class login_model extends CI_Model
         $query = $this->db->query($sql);
         return $query->result_array();
     }
+
+    public function recover_user($post)
+    {
+        $sql = "SELECT Correo, Contraseña FROM user_admin WHERE Correo = '".$post['user']."'";
+        $query = $this->db->query($sql);
+        return $query->result_array();
+    }
     
 }

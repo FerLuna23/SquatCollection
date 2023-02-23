@@ -74,6 +74,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <button type="submit" class="waves-effect waves-light btn  light-blue darken-4"><i class="material-icons right">arrow_forward</i>ingresar</button>
                             </form>
                         </div>
+                        <div class="card-action">
+                            <a href="#" class="red-text" id="btn-forgot">Olvidé mi contraseña</a>
+                            <p class="red-text hide" id="wait-message">Espere un momento...</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -81,10 +85,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </main>
     <script type="text/javascript">
         $(document).ready(function(){
+
             $('#login-form').on("submit", function(e){
                 e.preventDefault();
-                
-                //var serialize = $(this).serialize();
+
                 var formData = new FormData(this);
             
                 $.ajax({
@@ -108,6 +112,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 }).fail(function(jqXHR, textStatus, thrown) {
                     //console.log(jqXHR);
                     //console.log(textStatus);
+                    alert('Ocurrió un error desconocido');
+                });
+            });
+
+            $('#btn-forgot').click((e) => {
+                
+                let userInfo = $.trim($('#user-login').val());
+                
+                if (userInfo === "") {
+                    alert('Favor de proporcionar el usuario al que se quiere recuperar la contraseña');
+                    return;
+                }
+                
+                $('#btn-forgot').addClass('hide');
+                $('#wait-message').removeClass('hide');
+
+                $.ajax({
+                    url: "<?= base_url('index.php/login/recovery'); ?>",
+                    type: "POST",
+                    data: { user: userInfo }
+
+                }).done(function(response, textStatus, jqXHR) {
+                    
+                    $('#btn-forgot').removeClass('hide');
+                    $('#wait-message').addClass('hide');
+
+                    var json = $.parseJSON(response);
+                    alert(json.message);
+
+                }).fail(function(jqXHR, textStatus, thrown) {
+                    //console.log(jqXHR);
+                    //console.log(textStatus);
+                    $('#btn-forgot').removeClass('hide');
+                    $('#wait-message').addClass('hide');
+
                     alert('Ocurrió un error desconocido');
                 });
             });
