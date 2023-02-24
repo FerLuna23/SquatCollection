@@ -107,7 +107,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         return;
                     }
 
-                    window.location.replace("<?= base_url('index.php/setting') ?>");
+                    window.location.replace("<?= base_url() ?>");
 
                 }).fail(function(jqXHR, textStatus, thrown) {
                     //console.log(jqXHR);

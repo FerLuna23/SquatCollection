@@ -8,7 +8,7 @@
             parent::__construct();
 
             if (!$this->session->userdata('status')):
-                header("Location:" . base_url('index.php/login'));
+                header("Location:" . base_url());
             endif;
         }
 
