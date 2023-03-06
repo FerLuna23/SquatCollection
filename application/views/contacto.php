@@ -97,42 +97,42 @@
 
         <div class="section container">
             <div class="row">
-                <form class="col s12">
+                <form id="form-contact" class="col s12">
                     <div class="row card panel">
 
                         <div class="input-field col s6">
                             <i class="material-icons prefix">account_circle</i>
-                            <input id="nombre" type="text" class="validate" required>
+                            <input id="nombre" name="nombre" type="text" class="validate" required>
                             <label for="Nombre">Nombre(s)</label>
                         </div>
 
                         <div class="input-field col s6">
                             <i class="material-icons prefix">business</i>
-                            <input id="apellido" type="text" class="validate" required>
-                            <label for="Apellido">Empresa</label>
+                            <input id="empresa" name="empresa" type="text" class="validate" required>
+                            <label for="empresa">Empresa</label>
                         </div>
 
                         <div class="input-field col s6">
                             <i class="material-icons prefix">phone</i>
-                            <input id="tel" type="number" class="validate" required>
-                            <label for="Telefono">Teléfono</label>
+                            <input id="tel" name="tel" type="number" class="validate" required>
+                            <label for="tel">Teléfono</label>
                         </div>
 
                         <div class="input-field col s6">
                             <i class="material-icons prefix">mail</i>
-                            <input id="mail" type="tel" class="validate" required>
-                            <label for="Mail">Correo Eléctronico</label>
+                            <input id="mail" name="mail" type="tel" class="validate" required>
+                            <label for="mail">Correo Eléctronico</label>
                         </div>
 
                         <div class="input-field col s12">
                             <i class="material-icons prefix">message</i>
-                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <textarea id="textarea1" name="comen" class="materialize-textarea"></textarea>
                             <label for="textarea1">Escribe un comentario</label>
                         </div>
 
 
                         <button class="btn" id="BtnSend" type="submit">Enviar</button><br><br>
-
+                        <p class="red-text hide" id="wait-message">Espere un momento...</p>
 
                     </div>
                 </form>
@@ -199,6 +199,43 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
+
+        $('#form-contact').on("submit", function(e){
+            e.preventDefault();
+
+            $('#BtnSend').addClass('hide');
+            $('#wait-message').removeClass('hide');
+
+            var formData = new FormData(this);
+
+            $.ajax({
+                url: "<?= base_url('index.php/contacto/save'); ?>",
+                type: "POST",
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false
+
+            }).done(function(response, textStatus, jqXHR) {
+                //console.log(response);
+                $('#btn-forgot').removeClass('hide');
+                $('#wait-message').addClass('hide');
+
+                var json = $.parseJSON(response);
+                //console.log(json);
+                alert(json.message);
+
+                if (json.status) { location.reload(); }
+
+            }).fail(function(jqXHR, textStatus, thrown) {
+                //console.log(jqXHR);
+                //console.log(textStatus);
+                $('#btn-forgot').removeClass('hide');
+                $('#wait-message').addClass('hide');
+
+                alert('Error inesperado');
+            });
+        });
 
 
         setInterval(function(){
