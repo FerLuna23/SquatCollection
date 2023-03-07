@@ -65,6 +65,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="PC">
         <div>
             <p class="textoPC"> <strong> CONFIGURACIÓN</strong></p>
+            <p><?= var_dump($ContenidoImgInicio)  ?></p>
         </div>
     </div>
 
@@ -203,7 +204,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <!--label for="textarea1"></label-->
                                     </div> <br> 
                                     <div class="col s2">
-                                    <a class="btn-floating btn-large waves-effect btn red" onClick="verModal('Plantilla/img/ADE.jpeg')"><i class="material-icons">add</i></a>
+                                    <a class="btn-floating btn-large waves-effect btn red" onClick="verModal('<?= $ContenidoImgInicio[0]->Nombre ?>', '<?= $ContenidoImgInicio[0]->Ruta ?>')"><i class="material-icons">add</i></a>
                                     </div>         
                                 </div>
                             </div>
@@ -234,7 +235,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <textarea id="textarea2" class="materialize-textarea"></textarea>
                                     </div> <br> 
                                     <div class="col s2">
-                                        <a class="btn-floating btn-large waves-effect btn red" onClick="verModal('Plantilla/img/TDT.jpeg')"><i class="material-icons">add</i></a>
+                                        <a class="btn-floating btn-large waves-effect btn red" onClick="verModal('<?= $ContenidoImgInicio[1]->Id ?>', '<?= $ContenidoImgInicio[1]->Nombre ?>', '<?= $ContenidoImgInicio[1]->Ruta ?>')"><i class="material-icons">add</i></a>
                                     </div>         
                                 </div>
                             </div>
@@ -264,7 +265,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <textarea id="textarea3" class="materialize-textarea"></textarea>
                                     </div> <br> 
                                     <div class="col s2">
-                                        <a class="btn-floating btn-large waves-effect btn red" onClick="verModal('Plantilla/img/PV.jpeg')"><i class="material-icons">add</i></a>
+                                        <a class="btn-floating btn-large waves-effect btn red" onClick="verModal('<?= $ContenidoImgInicio[2]->Id ?>', '<?= $ContenidoImgInicio[2]->Nombre ?>', '<?= $ContenidoImgInicio[2]->Ruta ?>')"><i class="material-icons">add</i></a>
                                     </div>          
                                 </div>
                                 <!--div><?= var_dump($ContenidoTextos[1]->Texto); ?></div-->
@@ -307,7 +308,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <textarea id="textarea7" class="materialize-textarea"></textarea>
                                     </div> <br> 
                                     <div class="col s2">
-                                        <a class="btn-floating btn-large waves-effect btn red" onClick="verModal('Plantilla/img/QuienesSomos.jpg')"><i class="material-icons">add</i></a>
+                                        <a class="btn-floating btn-large waves-effect btn red" onClick="verModal('<?= $ContenidoImgInicio[3]->Id ?>', '<?= $ContenidoImgInicio[3]->Nombre ?>', '<?= $ContenidoImgInicio[3]->Ruta ?>')"><i class="material-icons">add</i></a>
                                     </div>          
                                 </div>
                             </div>
@@ -338,7 +339,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <textarea id="textarea8" class="materialize-textarea"></textarea>
                                     </div> <br> 
                                     <div class="col s2">
-                                        <a class="btn-floating btn-large waves-effect btn red" onClick="verModal('Plantilla/img/ExtensoCatalogo.jpg')"><i class="material-icons">add</i></a>
+                                        <a class="btn-floating btn-large waves-effect btn red" onClick="verModal('<?= $ContenidoImgInicio[4]->Id ?>', '<?= $ContenidoImgInicio[4]->Nombre ?>', '<?= $ContenidoImgInicio[4]->Ruta ?>')"><i class="material-icons">add</i></a>
                                     </div>          
                                 </div>
                             </div>
@@ -368,7 +369,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <textarea id="textarea9" class="materialize-textarea"></textarea>
                                     </div> <br> 
                                     <div class="col s2">
-                                        <a class="btn-floating btn-large waves-effect btn red" onClick="verModal('Plantilla/img/Misión.jpg')"><i class="material-icons">add</i></a>
+                                        <a class="btn-floating btn-large waves-effect btn red" onClick="verModal('<?= $ContenidoImgInicio[5]->Id ?>', '<?= $ContenidoImgInicio[5]->Nombre ?>', '<?= $ContenidoImgInicio[5]->Ruta ?>')"><i class="material-icons">add</i></a>
                                     </div>          
                                 </div>
                                 <!--div><?= var_dump($ContenidoTextos[1]->Texto); ?></div-->
@@ -402,7 +403,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <textarea id="textarea10" class="materialize-textarea"></textarea>
                                     </div> <br> 
                                     <div class="col s2">
-                                    <a class="btn-floating btn-large waves-effect btn red" onClick="verModal('Plantilla/img/Visión.jpg')"><i class="material-icons">add</i></a>
+                                    <a class="btn-floating btn-large waves-effect btn red" onClick="verModal('<?= $ContenidoImgInicio[6]->Id ?>', '<?= $ContenidoImgInicio[6]->Nombre ?>', '<?= $ContenidoImgInicio[6]->Ruta ?>')"><i class="material-icons">add</i></a>
                                     </div>          
                                 </div>
                             </div>
@@ -453,6 +454,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </div>
 
                                 <input type="hidden" id="url" name="url" value="0">
+                                <input type="hidden" id="id" name="id" value="0">
                             </form> 
                         </div>
 
@@ -538,19 +540,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         processData: false
 
       }).done(function(response, textStatus, jqXHR) {
-        console.log(response);
+        //console.log(response);
+        var json = $.parseJSON(response);
+        //console.log(json);
+        alert(json.message);
+
+        if (json.status) { location.reload(); }
 
       }).fail(function(jqXHR, textStatus, thrown) {
         
         var resp = jqXHR.responseText;
         console.log(resp);
+        alert('Error inesperado');
       });
     });
 
-    const verModal = (img) => {
-
-        $('#url').val(img);
-        $('#img-modal').attr('src', '<?= base_url() ?>' + img);
+    const verModal = (id, img, url) => {
+        
+        $('#id').val(id);
+        $('#url').val(url);
+        $('#img-modal').attr('src', '<?= base_url() ?>' + `${url}/${img}`);
         $('#modal1').modal('open');
 
     }

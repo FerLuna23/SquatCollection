@@ -15,7 +15,8 @@
 		public function index()
 		{   $this->load->model('home_model');
 			$data['ContenidoTextos'] = $this->home_model->ReadAll();
-			//var_dump($data);
+            $data['ContenidoImgInicio'] = $this->home_model->ReadAllImg();
+            
 			$this->load->view('setting', $data);
 		}
 
@@ -27,10 +28,9 @@
 			$Contenido['nombre'] = $this->input->post('titulo');
 			$Contenido['Texto'] = $this->input->post('texto');
 			$this->home_model->Agregar($Contenido);
-			//echo "Hola soy Fernanda";
 		}
 
-		private function cargarArchivos() {
+		private function cargarArchivos($url) {
 
 			$files = [];
 			$error = "";
@@ -38,7 +38,8 @@
 			if(!empty($_FILES)) {
 	
 				$count = count($_FILES['files']['name']);
-				$upload_path = "Plantilla/img/inicio";
+				//$upload_path = "Plantilla/img/";
+                $upload_path = $url;
 	
 				if (strlen($_FILES['files']['name'][0]) > 0) {
 	
@@ -78,11 +79,26 @@
 
 		public function UpdateImage()
 		{
+            $id = $this->input->post('id');
+            $url = $this->input->post('url');
+			$files = $this->cargarArchivos($url);
 
-			$files = $this->cargarArchivos();
-			//$nombreArchivo = $files['files'][0];
-			var_dump($files);
+            $response = [];
 
+            if (!empty($files['uploadError'])) {
+                $response['status'] = false;
+                $response['message'] = 'Error al subir imagen';
+                echo json_encode($response);
+                return;
+            }
+			
+            $nombreArchivo = $files['files'][0];
+			$this->load->model('home_model');
+			$this->home_model->AgregarImg($id, $nombreArchivo);
+            
+            $response['status'] = true;
+            $response['message'] = 'Imagen cargada correctamente';
+            echo json_encode($response);
 		}
 		
 

@@ -10,6 +10,11 @@ class home_model extends CI_Model
            
         }
 
+        public function AgregarImg($id, $Nombre) {
+            $sql = "UPDATE imageinicio SET Nombre = '$Nombre' WHERE Id = $id";
+            return $this->db->query($sql);
+        }
+
         /**function update($id, $nombre, $Texto){
             $this->db->where('id', $id);
             $this->db->set('nombre', $nombre, 'texto', $Texto);
@@ -26,6 +31,13 @@ class home_model extends CI_Model
         {
             $this->db->Select('nombre, Texto');
             $this->db->from('contenttext');
+            return $this->db->get()->result();
+        }
+
+        public function ReadAllImg()
+        {
+            $this->db->Select('Id, Nombre, Ruta');
+            $this->db->from('imageinicio');
             return $this->db->get()->result();
         }
 
