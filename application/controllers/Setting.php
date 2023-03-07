@@ -38,7 +38,7 @@
 			if(!empty($_FILES)) {
 	
 				$count = count($_FILES['files']['name']);
-				$upload_path = "materialize/img/avisos/";
+				$upload_path = "Plantilla/img/inicio";
 	
 				if (strlen($_FILES['files']['name'][0]) > 0) {
 	
@@ -54,7 +54,8 @@
 						$config['allowed_types']    = "*";
 						$config['max_size']         = 1000;//1MB
 	
-						$this->load->library('upload', $config);
+						$this->load->library('upload');
+						$this->upload->initialize($config);
 	
 						if (!$this->upload->do_upload()) {
 	
@@ -79,7 +80,8 @@
 		{
 
 			$files = $this->cargarArchivos();
-			print_r($files);
+			//$nombreArchivo = $files['files'][0];
+			var_dump($files);
 
 		}
 		

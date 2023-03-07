@@ -203,7 +203,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <!--label for="textarea1"></label-->
                                     </div> <br> 
                                     <div class="col s2">
-                                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+                                    <a class="btn-floating btn-large waves-effect btn red" onClick="verModal('Plantilla/img/ADE.jpeg')"><i class="material-icons">add</i></a>
                                     </div>         
                                 </div>
                             </div>
@@ -234,7 +234,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <textarea id="textarea2" class="materialize-textarea"></textarea>
                                     </div> <br> 
                                     <div class="col s2">
-                                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+                                        <a class="btn-floating btn-large waves-effect btn red" onClick="verModal('Plantilla/img/TDT.jpeg')"><i class="material-icons">add</i></a>
                                     </div>         
                                 </div>
                             </div>
@@ -264,7 +264,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <textarea id="textarea3" class="materialize-textarea"></textarea>
                                     </div> <br> 
                                     <div class="col s2">
-                                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+                                        <a class="btn-floating btn-large waves-effect btn red" onClick="verModal('Plantilla/img/PV.jpeg')"><i class="material-icons">add</i></a>
                                     </div>          
                                 </div>
                                 <!--div><?= var_dump($ContenidoTextos[1]->Texto); ?></div-->
@@ -272,7 +272,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                         </div>
                     </div>
+
                     <br><br><br>
+
                     <div>
 
                         <div class="">
@@ -305,7 +307,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <textarea id="textarea7" class="materialize-textarea"></textarea>
                                     </div> <br> 
                                     <div class="col s2">
-                                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+                                        <a class="btn-floating btn-large waves-effect btn red" onClick="verModal('Plantilla/img/QuienesSomos.jpg')"><i class="material-icons">add</i></a>
                                     </div>          
                                 </div>
                             </div>
@@ -336,7 +338,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <textarea id="textarea8" class="materialize-textarea"></textarea>
                                     </div> <br> 
                                     <div class="col s2">
-                                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+                                        <a class="btn-floating btn-large waves-effect btn red" onClick="verModal('Plantilla/img/ExtensoCatalogo.jpg')"><i class="material-icons">add</i></a>
                                     </div>          
                                 </div>
                             </div>
@@ -366,7 +368,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <textarea id="textarea9" class="materialize-textarea"></textarea>
                                     </div> <br> 
                                     <div class="col s2">
-                                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+                                        <a class="btn-floating btn-large waves-effect btn red" onClick="verModal('Plantilla/img/Misión.jpg')"><i class="material-icons">add</i></a>
                                     </div>          
                                 </div>
                                 <!--div><?= var_dump($ContenidoTextos[1]->Texto); ?></div-->
@@ -400,7 +402,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <textarea id="textarea10" class="materialize-textarea"></textarea>
                                     </div> <br> 
                                     <div class="col s2">
-                                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+                                    <a class="btn-floating btn-large waves-effect btn red" onClick="verModal('Plantilla/img/Visión.jpg')"><i class="material-icons">add</i></a>
                                     </div>          
                                 </div>
                             </div>
@@ -415,42 +417,55 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </button>
 
                 <!-- Modal Trigger -->
-                <a class="waves-effect btn modal-trigger" href="#modal1">Modal</a>
+                <!--a class="btn-floating btn-large waves-effect btn modal-trigger red" href="#modal1"><i class="material-icons">add</i></a>
+                <a class="waves-effect btn modal-trigger" href="#modal1">Modal</a-->
+
                 <!-- Modal Structure -->
-                <div id="modal1" class="modal modal-fixed-footer">
-                <div class="modal-content">
-                    <img class="materialboxed" width="650" src="<?= base_url() ?>Plantilla/img/ADE.jpeg">
-
-                    <div class="input-field col s12">
-                          <div class="file-field input-field">
-                               <legend style="font-weight: bold;">Subir Foto</legend>
-                            <div class="btn js-bgcolor-c">
-                              <i class="material-icons">file_upload</i>
-                              <input id="imagen_new" type="file" name="files[]" accept="image/*">
-                            </div>
-                            <div class="file-path-wrapper">
-                              <input class="file-path validate" type="text" placeholder="Cargar foto .jpg, .png">
-                            </div>
-                          </div>
-                    </div>
-
-                </div>
-                <div class="modal-footer">
-                    <!--button class="btn waves-effect waves-light" type="submit" name="action">Guardar
-                            <i class="material-icons right">send</i>
-                    </button-->
-                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Aceptar</a>
-
-                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancelar</a>
-                </div>
-                </div>
 
 
             </form>
+
+            
+
+                <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <div class="row" id="IM">
+                                <img class="materialboxed" id="img-modal" width="650" src="<?= base_url() ?>Plantilla/img/ADE.jpeg">
+                            </div>
+                            <form class="col s12" id="form-aviso-create">
+                                <div class="input-field col s12">
+                                    <div class="file-field input-field">
+                                        <legend style="font-weight: bold;">Subir Foto</legend>
+                                        <div class="btn js-bgcolor-c">
+                                            <i class="material-icons">file_upload</i>
+                                            <input id="imagen_new" type="file" name="files[]" accept="image/*">
+                                        </div>
+                                        <div class="file-path-wrapper">
+                                            <input class="file-path validate" type="text" placeholder="Cargar foto .jpg, .png">
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <button class="btn waves-effect waves-light" type="submit" name="action">Guardar
+                                        <i class="material-icons right">send</i>
+                                    </button>
+                                </div>
+
+                                <input type="hidden" id="url" name="url" value="0">
+                            </form> 
+                        </div>
+
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancelar</a>
+                        </div>
+
+                </div>
+            
         </div>
     </div>
 
-    <br><br><br>
+    <br>
 
 
     <footer class="page-footer black ">
@@ -531,6 +546,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         console.log(resp);
       });
     });
+
+    const verModal = (img) => {
+
+        $('#url').val(img);
+        $('#img-modal').attr('src', '<?= base_url() ?>' + img);
+        $('#modal1').modal('open');
+
+    }
+
+
+
 </script>
 
 </html>
