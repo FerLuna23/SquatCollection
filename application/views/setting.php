@@ -65,7 +65,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="PC">
         <div>
             <p class="textoPC"> <strong> CONFIGURACIÓN</strong></p>
-            <p><?= var_dump($ContenidoImgInicio)  ?></p>
         </div>
     </div>
 
