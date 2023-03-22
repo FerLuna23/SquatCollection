@@ -46,6 +46,7 @@ class Contacto extends CI_Controller {
 
         $this->email->from('recovery.system23@outlook.com', 'Administración de sistema');
         $this->email->to('mflunac18@gmail.com');
+        //$this->email->to('administracion@gesquat.com');
         $this->email->subject('Solicitud de contacto');
         $this->email->message($message);
 
