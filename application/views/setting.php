@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 
-	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>Plantilla/css/Materialize.css" />
+	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>Plantilla/css/materialize.css" />
     <link rel="stylesheet" type="text/css" href="<?= base_url() ?>Plantilla/css/index.css" />
     <link rel="stylesheet" type="text/css" href="<?= base_url() ?>Plantilla/css/setting.css" />
 
